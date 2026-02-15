@@ -20,5 +20,14 @@
 - 詰まったら各Questの「失敗例」と「用語ミニ辞典」を先に読む。
 - 進捗はHUDメトリクス（FPS/dtジッタ/テレメトリ誤差/命令数）で可視化する。
 
+
+## まずどこを触ればいい？（出発点）
+- 最短スタート: `Q00 -> Q01 -> Q02` の順で進める。
+- 初手ファイル:
+  - Q00: `src/main.c`
+  - Q01: `tests/test_game_determinism.c`
+  - Q02: `src/main.c`
+- API固定ルール: `src/platform/platform.h` / `src/game/game.h` / `src/engine/engine.h` は原則変更しない。
+
 ## セットアップと実行
 環境構築・ビルド・実行手順は `docs/README.md` を参照してください。
